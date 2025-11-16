@@ -2378,7 +2378,10 @@ function loadTabs() {
             addTab(tabData.title, tabData.content, tabData.id);
         });
     } else {
-        addTab('New Tab 1'); 
+        // First start: create two default tabs
+        addTab('New Tab 1');
+        const uncTestContent = `--[[\n The script below will run a UNC test and print results to the F9 Developer Console\n ingame.]]--\n\n loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/uuuuuuu/refs/heads/main/UNC%20test"))()`;
+        addTab('UNC Test', uncTestContent);
     }
 }
 
@@ -2838,4 +2841,5 @@ function setupAutosave() {
 </body>
 
 </html>
+
 
